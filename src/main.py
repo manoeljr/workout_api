@@ -1,9 +1,11 @@
 from fastapi import FastAPI
+from src.routers import app_router
 
 
 app = FastAPI(
     title='WorkoutAPI'
 )
+app.include_router(app_router)
 
 
 if __name__ == '__name__':
